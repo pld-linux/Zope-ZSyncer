@@ -3,12 +3,12 @@ Summary:	Project allows multiple Zopes to easily be manually synchronized
 Summary(pl):	Projekt pozwalaj±cy na synchronizowanie obiektów miêdzy ró¿nymi serwisami Zope
 Name:		Zope-%{zope_subname}
 Version:	0.6.0
-%define		sub_ver beta2
+%define		sub_ver beta3
 Release:	0.%{sub_ver}.1
 License:	GPL
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/zsyncer/%{zope_subname}-%{version}-%{sub_ver}.tgz
-# Source0-md5:	04d448c64c37caf1aff00dab222b1803
+# Source0-md5:	0615800bc97be463dabe11c46c848bb0
 URL:		http://sourceforge.net/projects/zsyncer/
 Requires(post,postun):	/usr/sbin/installzopeproduct
 %pyrequires_eq	python-modules
@@ -31,7 +31,7 @@ serwisami Zope, korzystaj±c z xml-rpc.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}/%{name}
 
-cp -af {Extensions,dtml,help,skin,skins,www,*.py,*.gif,version.txt} $RPM_BUILD_ROOT%{_datadir}/%{name}
+cp -af {Extensions,dtml,help,skins,www,*.py,*.gif,version.txt} $RPM_BUILD_ROOT%{_datadir}/%{name}
 
 %py_comp $RPM_BUILD_ROOT%{_datadir}/%{name}
 %py_ocomp $RPM_BUILD_ROOT%{_datadir}/%{name}
