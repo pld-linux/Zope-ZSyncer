@@ -11,6 +11,7 @@ Source0:	http://dl.sourceforge.net/zsyncer/%{zope_subname}-%{version}-%{sub_ver}
 # Source0-md5:	0615800bc97be463dabe11c46c848bb0
 URL:		http://sourceforge.net/projects/zsyncer/
 Requires(post,postun):	/usr/sbin/installzopeproduct
+BuildRequires:  python
 %pyrequires_eq	python-modules
 Requires:	Zope
 BuildArch:	noarch
