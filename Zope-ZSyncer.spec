@@ -1,6 +1,6 @@
 %define		zope_subname	ZSyncer
 Summary:	Project allows multiple Zopes to easily be manually synchronized
-Summary(pl):	Projekt pozwala synchronizowaæ obiekty miêdzy ró¿nymi serwisami Zope
+Summary(pl):	Projekt pozwalaj±cy na synchronizowanie obiektów miêdzy ró¿nymi serwisami Zope
 Name:		Zope-%{zope_subname}
 Version:	0.6.0
 %define		sub_ver beta2
@@ -26,8 +26,6 @@ serwisami Zope, korzystaj±c z xml-rpc.
 
 %prep
 %setup -q -n %{zope_subname}
-
-%build
 
 %install
 rm -rf $RPM_BUILD_ROOT
