@@ -4,7 +4,7 @@ Summary(pl):	Projekt pozwalaj±cy na synchronizowanie obiektów miêdzy ró¿nymi ser
 Name:		Zope-%{zope_subname}
 Version:	0.6.0
 %define		sub_ver beta3
-Release:	0.%{sub_ver}.1
+Release:	0.%{sub_ver}.2
 License:	GPL
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/zsyncer/%{zope_subname}-%{version}-%{sub_ver}.tgz
