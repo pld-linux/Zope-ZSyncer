@@ -17,11 +17,11 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-ZSyncer project allows multiple Zopes to easily be manually 
+ZSyncer project allows multiple Zopes to easily be manually
 synchronized by transferring data between them using xml-rpc.
 
 %description -l pl
-Projekt ZSyncer pozwala synchronizowaæ obiekty miêdzy ró¿nymi 
+Projekt ZSyncer pozwala synchronizowaæ obiekty miêdzy ró¿nymi
 serwisami Zope, korzystaj±c z xml-rpc.
 
 %prep
