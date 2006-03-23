@@ -1,17 +1,18 @@
 %define		zope_subname	ZSyncer
+%define		sub_ver beta3
 Summary:	Project allows multiple Zopes to easily be manually synchronized
 Summary(pl):	Projekt pozwalaj±cy na synchronizowanie obiektów miêdzy ró¿nymi serwisami Zope
 Name:		Zope-%{zope_subname}
 Version:	0.6.0
-%define		sub_ver beta3
 Release:	0.%{sub_ver}.2
 License:	GPL
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/zsyncer/%{zope_subname}-%{version}-%{sub_ver}.tgz
 # Source0-md5:	0615800bc97be463dabe11c46c848bb0
 URL:		http://sourceforge.net/projects/zsyncer/
-Requires(post,postun):	/usr/sbin/installzopeproduct
 BuildRequires:	python
+BuildRequires:	rpmbuild(macros) >= 1.268
+Requires(post,postun):	/usr/sbin/installzopeproduct
 %pyrequires_eq	python-modules
 Requires:	Zope
 BuildArch:	noarch
@@ -44,16 +45,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 /usr/sbin/installzopeproduct %{_datadir}/%{name} %{zope_subname}
-if [ -f /var/lock/subsys/zope ]; then
-	/etc/rc.d/init.d/zope restart >&2
-fi
+%service -q zope restart
 
 %postun
 if [ "$1" = "0" ]; then
 	/usr/sbin/installzopeproduct -d %{zope_subname}
-	if [ -f /var/lock/subsys/zope ]; then
-		/etc/rc.d/init.d/zope restart >&2
-	fi
+	%service -q zope restart
 fi
 
 %files
