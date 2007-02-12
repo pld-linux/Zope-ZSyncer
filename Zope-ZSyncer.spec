@@ -1,7 +1,7 @@
 %define		zope_subname	ZSyncer
 %define		sub_ver beta3
 Summary:	Project allows multiple Zopes to easily be manually synchronized
-Summary(pl.UTF-8):   Projekt pozwalający na synchronizowanie obiektów między różnymi serwisami Zope
+Summary(pl.UTF-8):	Projekt pozwalający na synchronizowanie obiektów między różnymi serwisami Zope
 Name:		Zope-%{zope_subname}
 Version:	0.6.0
 Release:	0.%{sub_ver}.2
